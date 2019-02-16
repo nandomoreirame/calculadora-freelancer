@@ -30,7 +30,7 @@ const Freela = {
    * @valor ~> valor a ser formatado para real
    */
   formatarValor: (valor) => {
-    if (invalidos([valor])) return 0
+    if (invalidos([valor])) valor = 0
     if (typeof valor === 'string') valor = parseFloat(valor)
     let valorFormatado = valor.toFixed(2).split('.')
     valorFormatado[0] = `R$ ${valorFormatado[0].split(/(?=(?:...)*$)/).join('.')}`
